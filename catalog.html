@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Весь каталог автомобилей — Aurum Motors, Молодечно</title>
+  <meta name="description" content="Каталог автомобилей Aurum Motors в Молодечно. Выберите автомобиль по марке, кузову, году выпуска и цене.">
+  <meta property="og:title" content="Каталог автомобилей — Aurum Motors">
+  <meta property="og:description" content="Автомобили в наличии в Молодечно: фотографии, цены и характеристики.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="catalog">
+<header class="cat-header">
+  <div class="container container--cat cat-header__inner">
+    <a href="index.html" class="logo">Aurum<span>.</span>Motors</a>
+    <span class="cat-header__title">Каталог автомобилей</span>
+    <a class="btn-ui btn-ui--outline btn-ui--round" href="tel:+375291234567"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="hide-xs">+375 29 123-45-67</span><span class="only-xs">Позвонить</span></a>
+  </div>
+</header>
+
+<main class="container container--cat cat-main">
+  <a href="index.html" class="back-link"><svg class="icon icon--14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Главная</a>
+  <div class="cat-title">
+    <div><p class="eyebrow eyebrow--tight">Aurum Motors · Молодечно</p><h1>Весь каталог</h1></div>
+    <span class="muted-text cat-title__count">6 автомобилей в наличии</span>
+  </div>
+
+  <section aria-label="Фильтры каталога" class="cat-filters">
+    <div class="cat-filters__top">
+      <span class="cat-filters__name"><svg class="icon icon--16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>Подбор автомобиля</span>
+      <button type="button" class="btn-ui btn-ui--ghost btn-ui--sm" id="cf-reset" hidden><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>Сбросить</button>
+    </div>
+    <div class="cat-filters__grid">
+      <label class="cf"><span>Поиск</span>
+        <div class="cf__search"><svg class="icon cf__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input type="search" id="cf-q" class="select-ui select-ui--search" aria-label="Поиск автомобиля" placeholder="Марка или модель"></div></label>
+      <label class="cf"><span>Марка</span>
+        <select id="cf-brand" class="select-ui" aria-label="Марка"><option value="all">Все марки</option><option>BMW</option><option>Lincoln</option><option>Jaguar</option><option>Jetour</option><option>Mercedes-Benz</option></select></label>
+      <label class="cf"><span>Тип кузова</span>
+        <select id="cf-body" class="select-ui" aria-label="Тип кузова"><option value="all">Любой кузов</option><option>Седан</option><option>Кроссовер</option><option>Внедорожник</option><option>Купе</option></select></label>
+      <label class="range range--cat"><span class="range__head"><span class="muted-text">Цена до</span><span id="cf-price-val"></span></span>
+        <input type="range" id="cf-price" aria-label="Цена до" min="15000" max="100000" step="1000" value="100000"></label>
+      <label class="range range--cat"><span class="range__head"><span class="muted-text">Год от</span><span id="cf-year-val"></span></span>
+        <input type="range" id="cf-year" aria-label="Год от" min="2015" max="2024" step="1" value="2015"></label>
+    </div>
+  </section>
+
+  <div class="cat-results-bar">
+    <p role="status" class="muted-text">Найдено: <b id="cf-count">6</b></p>
+    <label class="cat-sort">Сортировка
+      <select id="cf-sort" class="select-ui select-ui--auto" aria-label="Сортировка">
+        <option value="default">По умолчанию</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="year">Сначала новее</option><option value="km">Меньше пробег</option>
+      </select></label>
+  </div>
+
+  <div class="car-grid" id="cat-grid">
+        <article class="car-card" data-id="bmw-740d" data-name="BMW 740d xDrive" data-brand="BMW" data-body="Седан" data-year="2023" data-km="18000" data-price="98500" data-index="0">
+      <div class="car-card__photo">
+        <img src="assets/img/car-sedan.jpg" alt="BMW 740d xDrive" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Седан</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">BMW 740d xDrive</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$98 500</div>
+            <div class="car-card__byn">322 095 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2023</span><span class="chip">18 000 км</span><span class="chip">3.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 834/мес</b></span>
+                      <button type="button" class="btn-ui btn-ui--ink btn-ui--sm" data-view="bmw-740d">Подробнее</button>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="lincoln-aviator" data-name="Lincoln Aviator Black Label" data-brand="Lincoln" data-body="Внедорожник" data-year="2022" data-km="34000" data-price="67900" data-index="1">
+      <div class="car-card__photo">
+        <img src="assets/img/car-suv.jpg" alt="Lincoln Aviator Black Label" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Внедорожник</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Lincoln Aviator Black Label</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$67 900</div>
+            <div class="car-card__byn">222 033 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2022</span><span class="chip">34 000 км</span><span class="chip">3.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 264/мес</b></span>
+                      <button type="button" class="btn-ui btn-ui--ink btn-ui--sm" data-view="lincoln-aviator">Подробнее</button>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="jaguar-f-type" data-name="Jaguar F-Type R" data-brand="Jaguar" data-body="Купе" data-year="2021" data-km="22000" data-price="74200" data-index="2">
+      <div class="car-card__photo">
+        <img src="assets/img/car-coupe.jpg" alt="Jaguar F-Type R" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Купе</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Jaguar F-Type R</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$74 200</div>
+            <div class="car-card__byn">242 634 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2021</span><span class="chip">22 000 км</span><span class="chip">5.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 381/мес</b></span>
+                      <button type="button" class="btn-ui btn-ui--ink btn-ui--sm" data-view="jaguar-f-type">Подробнее</button>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="jetour-x70" data-name="Jetour X70 Plus" data-brand="Jetour" data-body="Кроссовер" data-year="2024" data-km="6000" data-price="26400" data-index="3">
+      <div class="car-card__photo">
+        <img src="assets/img/car-crossover.jpg" alt="Jetour X70 Plus" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Кроссовер</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Jetour X70 Plus</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$26 400</div>
+            <div class="car-card__byn">86 328 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2024</span><span class="chip">6 000 км</span><span class="chip">1.6 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$491/мес</b></span>
+                      <button type="button" class="btn-ui btn-ui--ink btn-ui--sm" data-view="jetour-x70">Подробнее</button>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="bmw-530i" data-name="BMW 530i M Sport" data-brand="BMW" data-body="Седан" data-year="2020" data-km="61000" data-price="41800" data-index="4">
+      <div class="car-card__photo">
+        <img src="assets/img/car-sedan2.jpg" alt="BMW 530i M Sport" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Седан</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">BMW 530i M Sport</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$41 800</div>
+            <div class="car-card__byn">136 686 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2020</span><span class="chip">61 000 км</span><span class="chip">2.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$778/мес</b></span>
+                      <button type="button" class="btn-ui btn-ui--ink btn-ui--sm" data-view="bmw-530i">Подробнее</button>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="mb-gle-450" data-name="Mercedes-Benz GLE 450 4MATIC" data-brand="Mercedes-Benz" data-body="Внедорожник" data-year="2022" data-km="28000" data-price="58900" data-index="5">
+      <div class="car-card__photo">
+        <img src="assets/img/car-gle.jpg" alt="Mercedes-Benz GLE 450 4MATIC" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Внедорожник</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Mercedes-Benz GLE 450 4MATIC</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$58 900</div>
+            <div class="car-card__byn">192 603 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2022</span><span class="chip">28 000 км</span><span class="chip">3.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 096/мес</b></span>
+                      <button type="button" class="btn-ui btn-ui--ink btn-ui--sm" data-view="mb-gle-450">Подробнее</button>
+                  </div>
+      </div>
+    </article>
+      </div>
+  <div class="cat-empty" id="cat-empty" hidden>
+    <svg class="icon cat-empty__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>    <h2 class="h2 h2--sm">Автомобили не найдены</h2>
+    <p>По выбранным параметрам нет автомобилей в наличии.</p>
+    <button type="button" class="btn-ui btn-ui--outline btn-ui--round" id="cf-reset2">Сбросить фильтры</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container container--cat cat-footer">
+    <div><a href="index.html" class="footer-logo">Aurum<span>.</span>Motors</a><p class="cat-footer__addr">г. Молодечно, ул. Великий Гостинец, 100</p></div>
+    <a class="btn-ui btn-ui--outline btn-ui--round btn-ui--on-ink" href="tel:+375291234567">Связаться с автохаусом<svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+  </div>
+</footer>
+
+<dialog id="car-dialog" class="dialog" aria-labelledby="dlg-title" aria-describedby="dlg-desc">
+  <div class="dialog__content" tabindex="-1">
+    <h2 class="dialog__title" id="dlg-title"></h2>
+    <p class="dialog__desc" id="dlg-desc"></p>
+    <img class="dialog__img" id="dlg-img" alt="" width="1280" height="960">
+    <div class="dialog__foot">
+      <div><div class="dialog__usd" id="dlg-usd"></div><div class="dialog__byn" id="dlg-byn"></div></div>
+      <a class="btn-ui btn-ui--default btn-ui--round" href="tel:+375291234567"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Уточнить наличие</a>
+    </div>
+    <button type="button" class="dialog__close" id="dlg-close" aria-label="Закрыть"><svg class="icon " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  </div>
+</dialog>
+<script>window.AURUM = {"rate":3.27,"phone":"+375291234567","whatsapp":"https://wa.me/375291234567","telegram":"https://t.me/your_username","cars":[{"id":"bmw-740d","name":"BMW 740d xDrive","img":"assets/img/car-sedan.jpg","body":"Седан","year":2023,"km":18000,"vol":"3.0 л","price":98500},{"id":"lincoln-aviator","name":"Lincoln Aviator Black Label","img":"assets/img/car-suv.jpg","body":"Внедорожник","year":2022,"km":34000,"vol":"3.0 л","price":67900},{"id":"jaguar-f-type","name":"Jaguar F-Type R","img":"assets/img/car-coupe.jpg","body":"Купе","year":2021,"km":22000,"vol":"5.0 л","price":74200},{"id":"jetour-x70","name":"Jetour X70 Plus","img":"assets/img/car-crossover.jpg","body":"Кроссовер","year":2024,"km":6000,"vol":"1.6 л","price":26400},{"id":"bmw-530i","name":"BMW 530i M Sport","img":"assets/img/car-sedan2.jpg","body":"Седан","year":2020,"km":61000,"vol":"2.0 л","price":41800},{"id":"mb-gle-450","name":"Mercedes-Benz GLE 450 4MATIC","img":"assets/img/car-gle.jpg","body":"Внедорожник","year":2022,"km":28000,"vol":"3.0 л","price":58900}]};</script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>

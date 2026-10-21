@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aurum Motors — честные автомобили с историей</title>
+  <meta name="description" content="Премиальный автохаус в Молодечно: проверенные авто, выкуп и Trade-In, автокредит с одобрением от 15 минут.">
+  <meta property="og:title" content="Aurum Motors — честные автомобили с историей">
+  <meta property="og:description" content="Проверенные премиальные автомобили, выкуп за 1 минуту и автокредит.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="assets/img/hero-bmw.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">Aurum<span>.</span>Motors</a>
+    <nav class="site-nav" aria-label="Основное меню">
+      <a href="catalog.html">Каталог</a><a href="#tradein">Выкуп и Trade-In</a><a href="#credit">Автокредит</a><a href="#team">О компании</a><a href="#contacts">Контакты</a>    </nav>
+    <div class="site-header__right">
+      <a href="tel:+375291234567" class="site-header__phone">+375 29 123-45-67</a>
+      <a href="tel:+375291234567" class="btn btn--outline">Заказать звонок</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- HERO: фото BMW — фон на всех размерах экрана -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="assets/img/hero-bmw.jpg" alt="" width="1680" height="1200" fetchpriority="high">
+  </div>
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <p class="eyebrow">Премиальный автохаус · Молодечно</p>
+      <h1>Честные автомобили с историей. <em>Без компромиссов.</em></h1>
+      <p class="hero__lead">Каждый автомобиль проходит юридическую и техническую проверку. Прозрачная история, фиксированная цена и гарантия сделки.</p>
+      <div class="hero__actions">
+        <a href="catalog.html" class="btn btn--primary">Подобрать авто</a>
+        <a href="#tradein" class="btn btn--outline">Оценить свое авто</a>
+      </div>
+      <div class="stats">
+                  <div><div class="stats__v">84</div><div class="stats__l">авто в наличии</div></div>
+                  <div><div class="stats__v">15 мин</div><div class="stats__l">одобрение кредита</div></div>
+                  <div><div class="stats__v">120</div><div class="stats__l">точек проверки</div></div>
+              </div>
+    </div>
+  </div>
+  <span class="hero__badge">BMW 7 серии · проверен юридически и технически</span>
+</section>
+
+<!-- ПОДБОР -->
+<section class="container section">
+  <div class="filter-grid">
+    <div class="panel filter-grid__body">
+      <p class="muted-text mb-5">Тип кузова</p>
+      <div class="body-types" id="body-types">
+                  <button type="button" class="body-type" data-body-btn="Седан" aria-pressed="false">
+            <svg viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 15h18M5 15l2-4h10l2 4M7 11l2-3h6l2 3"/><circle cx="7" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/></svg>
+            Седан          </button>
+                  <button type="button" class="body-type" data-body-btn="Кроссовер" aria-pressed="false">
+            <svg viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 15h18M4 15l1-5h14l1 5M6 10l2-3h8l2 3"/><circle cx="7" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/></svg>
+            Кроссовер          </button>
+                  <button type="button" class="body-type" data-body-btn="Внедорожник" aria-pressed="false">
+            <svg viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 15h18M4 15V9h16v6M6 9V6h10l2 3"/><circle cx="7" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/></svg>
+            Внедорожник          </button>
+                  <button type="button" class="body-type" data-body-btn="Купе" aria-pressed="false">
+            <svg viewBox="0 0 24 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 15h18M4 15l3-4h11l2 4M8 11l3-2h4l3 2"/><circle cx="7" cy="16" r="1.6"/><circle cx="17" cy="16" r="1.6"/></svg>
+            Купе          </button>
+              </div>
+    </div>
+    <div class="panel filter-grid__ranges">
+      <label class="range"><span class="range__head"><span class="muted-text">Цена до</span><span class="range__val" id="f-price-val"></span></span>
+        <input type="range" id="f-price" min="15000" max="100000" step="1000" value="100000"></label>
+      <label class="range"><span class="range__head"><span class="muted-text">Год от</span><span class="range__val" id="f-year-val"></span></span>
+        <input type="range" id="f-year" min="2015" max="2024" step="1" value="2018"></label>
+    </div>
+    <a href="catalog.html" class="count-card" id="f-link">
+      <span class="count-card__label">Подходящих авто</span>
+      <span class="count-card__num" id="f-count">0</span>
+      <span class="count-card__cta"><span>Показать <span id="f-count2">0</span> подходящих авто</span><span class="count-card__arrow">→</span></span>
+    </a>
+  </div>
+</section>
+
+<!-- ВИТРИНА -->
+<section class="container section section--tight-top">
+  <div class="section-head">
+    <h2 class="h2">В наличии сейчас</h2>
+    <a href="catalog.html" class="link-ui">Весь каталог →</a>
+  </div>
+  <div class="car-grid">
+        <article class="car-card" data-id="bmw-740d" data-name="BMW 740d xDrive" data-brand="BMW" data-body="Седан" data-year="2023" data-km="18000" data-price="98500" data-index="0">
+      <div class="car-card__photo">
+        <img src="assets/img/car-sedan.jpg" alt="BMW 740d xDrive" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Седан</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">BMW 740d xDrive</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$98 500</div>
+            <div class="car-card__byn">322 095 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2023</span><span class="chip">18 000 км</span><span class="chip">3.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 834/мес</b></span>
+                      <a class="btn-ui btn-ui--ink btn-ui--sm" href="catalog.html?view=bmw-740d">Подробнее</a>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="lincoln-aviator" data-name="Lincoln Aviator Black Label" data-brand="Lincoln" data-body="Внедорожник" data-year="2022" data-km="34000" data-price="67900" data-index="1">
+      <div class="car-card__photo">
+        <img src="assets/img/car-suv.jpg" alt="Lincoln Aviator Black Label" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Внедорожник</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Lincoln Aviator Black Label</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$67 900</div>
+            <div class="car-card__byn">222 033 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2022</span><span class="chip">34 000 км</span><span class="chip">3.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 264/мес</b></span>
+                      <a class="btn-ui btn-ui--ink btn-ui--sm" href="catalog.html?view=lincoln-aviator">Подробнее</a>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="jaguar-f-type" data-name="Jaguar F-Type R" data-brand="Jaguar" data-body="Купе" data-year="2021" data-km="22000" data-price="74200" data-index="2">
+      <div class="car-card__photo">
+        <img src="assets/img/car-coupe.jpg" alt="Jaguar F-Type R" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Купе</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Jaguar F-Type R</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$74 200</div>
+            <div class="car-card__byn">242 634 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2021</span><span class="chip">22 000 км</span><span class="chip">5.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 381/мес</b></span>
+                      <a class="btn-ui btn-ui--ink btn-ui--sm" href="catalog.html?view=jaguar-f-type">Подробнее</a>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="jetour-x70" data-name="Jetour X70 Plus" data-brand="Jetour" data-body="Кроссовер" data-year="2024" data-km="6000" data-price="26400" data-index="3">
+      <div class="car-card__photo">
+        <img src="assets/img/car-crossover.jpg" alt="Jetour X70 Plus" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Кроссовер</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Jetour X70 Plus</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$26 400</div>
+            <div class="car-card__byn">86 328 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2024</span><span class="chip">6 000 км</span><span class="chip">1.6 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$491/мес</b></span>
+                      <a class="btn-ui btn-ui--ink btn-ui--sm" href="catalog.html?view=jetour-x70">Подробнее</a>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="bmw-530i" data-name="BMW 530i M Sport" data-brand="BMW" data-body="Седан" data-year="2020" data-km="61000" data-price="41800" data-index="4">
+      <div class="car-card__photo">
+        <img src="assets/img/car-sedan2.jpg" alt="BMW 530i M Sport" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Седан</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">BMW 530i M Sport</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$41 800</div>
+            <div class="car-card__byn">136 686 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2020</span><span class="chip">61 000 км</span><span class="chip">2.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$778/мес</b></span>
+                      <a class="btn-ui btn-ui--ink btn-ui--sm" href="catalog.html?view=bmw-530i">Подробнее</a>
+                  </div>
+      </div>
+    </article>
+        <article class="car-card" data-id="mb-gle-450" data-name="Mercedes-Benz GLE 450 4MATIC" data-brand="Mercedes-Benz" data-body="Внедорожник" data-year="2022" data-km="28000" data-price="58900" data-index="5">
+      <div class="car-card__photo">
+        <img src="assets/img/car-gle.jpg" alt="Mercedes-Benz GLE 450 4MATIC" loading="lazy" width="1280" height="960">
+        <span class="car-card__badge">Внедорожник</span>
+      </div>
+      <div class="car-card__body">
+        <div class="car-card__top">
+          <h3 class="car-card__title">Mercedes-Benz GLE 450 4MATIC</h3>
+          <div class="car-card__price">
+            <div class="car-card__usd">$58 900</div>
+            <div class="car-card__byn">192 603 BYN</div>
+          </div>
+        </div>
+        <div class="car-card__chips">
+          <span class="chip">2022</span><span class="chip">28 000 км</span><span class="chip">3.0 л</span>        </div>
+        <div class="car-card__foot">
+          <span class="car-card__monthly">от <b>$1 096/мес</b></span>
+                      <a class="btn-ui btn-ui--ink btn-ui--sm" href="catalog.html?view=mb-gle-450">Подробнее</a>
+                  </div>
+      </div>
+    </article>
+      </div>
+</section>
+
+<!-- ВЫКУП / TRADE-IN -->
+<section class="band" id="tradein">
+  <div class="container band__inner">
+    <div>
+      <p class="eyebrow">Выкуп и Trade-In</p>
+      <h2 class="h2 h2--lead">Оценка и выкуп<br><em>за 1 минуту</em></h2>
+      <p class="band__lead">Деньги в день обращения или зачёт стоимости в покупку нового автомобиля.</p>
+      <div class="steps" id="ti-steps">
+                  <button type="button" class="steps__btn" data-step="0"><span class="steps__dot">1</span><span class="steps__label">Автомобиль</span></button>
+                  <button type="button" class="steps__btn" data-step="1"><span class="steps__dot">2</span><span class="steps__label">Состояние</span></button>
+                  <button type="button" class="steps__btn" data-step="2"><span class="steps__dot">3</span><span class="steps__label">Контакты</span></button>
+              </div>
+    </div>
+    <div class="panel panel--bg ti-form">
+      <div class="ti-pane ti-pane--grid" data-pane="0">
+                  <label class="field"><span>Марка</span><input name="brand" placeholder="BMW"></label>
+                  <label class="field"><span>Модель</span><input name="model" placeholder="X5"></label>
+                  <label class="field"><span>Год</span><input name="year" placeholder="2019"></label>
+                  <label class="field"><span>Пробег, км</span><input name="km" placeholder="80 000"></label>
+              </div>
+      <div class="ti-pane ti-pane--list" data-pane="1" hidden>
+                  <button type="button" class="cond" data-cond="Отличное" aria-pressed="true">Отличное</button>
+                  <button type="button" class="cond" data-cond="Хорошее" aria-pressed="false">Хорошее</button>
+                  <button type="button" class="cond" data-cond="Требует вложений" aria-pressed="false">Требует вложений</button>
+              </div>
+      <div class="ti-pane ti-pane--contact" data-pane="2" hidden>
+        <label class="field"><span>Телефон</span><input name="phone" type="tel" inputmode="tel" placeholder="+375 (__) ___-__-__"></label>
+        <div class="ti-actions">
+          <a class="btn btn--primary" id="ti-wa" href="https://wa.me/375291234567" target="_blank" rel="noopener">Узнать в WhatsApp</a>
+          <a class="btn btn--outline" id="ti-tg" href="https://t.me/your_username" target="_blank" rel="noopener">Узнать в Telegram</a>
+        </div>
+      </div>
+      <button type="button" class="btn btn--primary ti-next" id="ti-next">Далее</button>
+    </div>
+  </div>
+</section>
+
+<!-- КРЕДИТ -->
+<section class="container section" id="credit">
+  <div class="credit-grid">
+    <div class="panel credit-grid__controls">
+      <h2 class="h2">Кредитный калькулятор</h2>
+      <label class="range"><span class="range__head"><span class="muted-text">Стоимость авто</span><span class="range__val" id="c-sum-val"></span></span>
+        <input type="range" id="c-sum" min="10000" max="150000" step="1000" value="50000"></label>
+      <label class="range"><span class="range__head"><span class="muted-text">Первоначальный взнос</span><span class="range__val" id="c-down-val"></span></span>
+        <input type="range" id="c-down" min="0" max="70" step="5" value="20"></label>
+      <label class="range"><span class="range__head"><span class="muted-text">Срок</span><span class="range__val" id="c-term-val"></span></span>
+        <input type="range" id="c-term" min="12" max="96" step="12" value="60"></label>
+    </div>
+    <div class="credit-grid__result">
+      <span class="credit-grid__label">Ежемесячный платёж</span>
+      <div>
+        <div class="credit-grid__pay" id="c-pay">$0</div>
+        <div class="credit-grid__sub" id="c-pay-byn"></div>
+      </div>
+      <a class="btn btn--primary credit-grid__cta" id="c-cta" href="https://wa.me/375291234567" target="_blank" rel="noopener">Получить предварительное одобрение</a>
+    </div>
+  </div>
+</section>
+
+<!-- КОМАНДА -->
+<section class="band" id="team">
+  <div class="container">
+    <p class="eyebrow">Команда</p>
+    <h2 class="h2 h2--lead team-title">Люди, которые отвечают за каждый автомобиль</h2>
+    <div class="team-grid">
+              <figure class="team-card">
+          <img src="assets/img/team-1.jpg" alt="Андрей Ковалёв" loading="lazy" width="768" height="960">
+          <figcaption><div class="team-card__name">Андрей Ковалёв</div><div class="muted-text">Основатель, 15 лет в авторынке</div></figcaption>
+        </figure>
+              <figure class="team-card">
+          <img src="assets/img/team-2.jpg" alt="Мария Лис" loading="lazy" width="768" height="960">
+          <figcaption><div class="team-card__name">Мария Лис</div><div class="muted-text">Кредитный специалист</div></figcaption>
+        </figure>
+              <figure class="team-card">
+          <img src="assets/img/team-3.jpg" alt="Дмитрий Орлов" loading="lazy" width="768" height="960">
+          <figcaption><div class="team-card__name">Дмитрий Орлов</div><div class="muted-text">Мастер-диагност</div></figcaption>
+        </figure>
+          </div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="container section">
+  <div class="section-head section-head--loose">
+    <h2 class="h2">Отзывы клиентов</h2>
+    <span class="muted-text"><b class="primary-text">4.9</b> · 312 отзывов</span>
+  </div>
+  <div class="reviews-grid">
+          <blockquote class="review">
+        <div><div class="review__stars" aria-label="5 из 5">★★★★★</div><p class="review__text">«Показали всю историю авто, дали проверить на независимом СТО. Купил без единого сюрприза.»</p></div>
+        <footer><div class="review__name">Сергей, Молодечно</div><div class="muted-text">BMW X5, 2020</div></footer>
+      </blockquote>
+          <blockquote class="review">
+        <div><div class="review__stars" aria-label="5 из 5">★★★★★</div><p class="review__text">«Сдала свою машину в Trade-In и уехала на новой в тот же день. Кредит одобрили за 20 минут.»</p></div>
+        <footer><div class="review__name">Ольга, Вилейка</div><div class="muted-text">Volvo XC60, 2021</div></footer>
+      </blockquote>
+          <blockquote class="review">
+        <div><div class="review__stars" aria-label="5 из 5">★★★★★</div><p class="review__text">«Специально ехал в Молодечно — цена честная, состояние ровно как в описании. Рекомендую.»</p></div>
+        <footer><div class="review__name">Игорь, Минск</div><div class="muted-text">Audi A6, 2019</div></footer>
+      </blockquote>
+      </div>
+</section>
+
+<!-- ПЛОЩАДКА -->
+<section class="container section section--bottom-only">
+  <div class="lot">
+    <img src="assets/img/lot.jpg" alt="Стоянка и шоурум автохауса" loading="lazy" width="1920" height="960">
+    <div class="lot__card">
+      <h2 class="h2 h2--sm">Наша площадка</h2>
+      <p>Крытый шоурум и охраняемая стоянка на 90 автомобилей. Приезжайте на тест-драйв без записи.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer" id="contacts">
+  <div class="container footer-grid">
+    <div><div class="footer-logo">Aurum<span>.</span>Motors</div><p class="footer-note">Честные автомобили с историей.</p></div>
+    <div><p class="footer-label">Шоурум</p>г. Молодечно, ул. Великий Гостинец, 100</div>
+    <div><p class="footer-label">Время работы</p>Пн–Сб 9:00–20:00<br>Вс 10:00–18:00</div>
+    <div><p class="footer-label">Связь</p><a href="tel:+375291234567">+375 29 123-45-67</a><br><span class="primary-text">WhatsApp · Telegram · Viber</span></div>
+  </div>
+  <div class="footer-bottom"><div class="container">© 2026 ООО «Аурум Моторс», УНП 000000000. Не является публичной офертой.</div></div>
+</footer>
+<script>window.AURUM = {"rate":3.27,"phone":"+375291234567","whatsapp":"https://wa.me/375291234567","telegram":"https://t.me/your_username","cars":[{"id":"bmw-740d","name":"BMW 740d xDrive","img":"assets/img/car-sedan.jpg","body":"Седан","year":2023,"km":18000,"vol":"3.0 л","price":98500},{"id":"lincoln-aviator","name":"Lincoln Aviator Black Label","img":"assets/img/car-suv.jpg","body":"Внедорожник","year":2022,"km":34000,"vol":"3.0 л","price":67900},{"id":"jaguar-f-type","name":"Jaguar F-Type R","img":"assets/img/car-coupe.jpg","body":"Купе","year":2021,"km":22000,"vol":"5.0 л","price":74200},{"id":"jetour-x70","name":"Jetour X70 Plus","img":"assets/img/car-crossover.jpg","body":"Кроссовер","year":2024,"km":6000,"vol":"1.6 л","price":26400},{"id":"bmw-530i","name":"BMW 530i M Sport","img":"assets/img/car-sedan2.jpg","body":"Седан","year":2020,"km":61000,"vol":"2.0 л","price":41800},{"id":"mb-gle-450","name":"Mercedes-Benz GLE 450 4MATIC","img":"assets/img/car-gle.jpg","body":"Внедорожник","year":2022,"km":28000,"vol":"3.0 л","price":58900}]};</script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
